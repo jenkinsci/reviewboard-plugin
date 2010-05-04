@@ -1,0 +1,51 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  
+  
+  <f:entry title="${%External Key Expression}" field="keyRegEx" description="Regular expression to match in SCM change lists to use as an external key (such as JIRA IDs) to map into review requests. &lt;br /&gt;Ex: HUDSON-[0-9]+">
+    <f:textbox />
+  </f:entry>
+
+  <f:advanced>
+    
+    <f:entry title="${%Default Review Groups}" field="defaultReviewGroups" description="The default Reviewboard groups that will be assigned to reviews created through this build.  Ex: developers,designers,managers">
+      <f:textbox />
+    </f:entry>
+
+    <f:entry title="${%Default Reviewers}" field="defaultReviewers" description="The default Reviewboard users that will be assigned to reviews created through this build.  Ex: rshelley">
+      <f:textbox />
+    </f:entry>
+	
+    <f:entry title="${%Set Change Owner as Default Reviewer}" field="authorAsReviewer" description="Set the owner of the change as one of the default reviewers in Reviewboard.">
+      <f:checkbox />
+    </f:entry>
+
+    <f:entry title="${%Publish Reviews}" field="publishReviews" description="Enables automatic review publishing when a review is created or updated.">
+      <f:checkbox />
+    </f:entry>
+
+    <f:entry title="${%Days Before Stale Review}" field="daysBeforeStaleReview" description="The number of days since a review was last updated (via Hudson) before a review is considered stale and a new review will be created if the external ID is re-encountered in a change. -1 = never">
+      <f:textbox />
+    </f:entry>
+
+
+    <f:entry title="${%Skip Unflagged Changes}" field="skipUnflaggedChanges" description="Defaults an unflagged change to skip create/update of Reviewboard review requests.">
+      <f:checkbox />
+    </f:entry>
+          
+    <f:entry title="${%Require RB_UPDATE}" field="forceUpdateOverride" description="Requires RB_UPDATE override flag in change descriptions to update reviews created with RB_NEW flag. (requires &quot;Skip unflagged changes&quot; be enabled)">
+      <f:checkbox />
+    </f:entry>
+
+    <f:entry title="${%Fail Build on Reviewboard Error}" field="failBuildOnReviewboardError" description="If there was an error while creating or updating a review request in Reviewboard, should it also fail the build?">
+      <f:checkbox />
+    </f:entry>
+
+	<!-- Commented out currently because debug mode hangs Hudson due to leaking file handles -->
+	<!--
+    <f:entry title="${%Debug post-review}" field="debugPostReview" description="Outputs debugging information from post-review into the Hudson console.">
+      <f:checkbox />
+    </f:entry>
+	-->
+	
+  </f:advanced>
+</j:jelly>
