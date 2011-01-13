@@ -359,7 +359,7 @@ public final class ReviewboardDescriptorImpl extends BuildStepDescriptor<Publish
      * @throws MalformedURLException
      * @throws IOException
      */
-    protected boolean isValidURL(String url) throws URISyntaxException, MalformedURLException, IOException{
+    protected boolean isValidURL(String url) throws URISyntaxException, IOException {
         if (url==null)  return false;
 		URI uri = new URI(url);
 		HttpURLConnection conn = (HttpURLConnection)uri.toURL().openConnection();
