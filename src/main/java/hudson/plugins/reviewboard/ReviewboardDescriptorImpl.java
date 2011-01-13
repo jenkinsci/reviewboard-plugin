@@ -360,6 +360,7 @@ public final class ReviewboardDescriptorImpl extends BuildStepDescriptor<Publish
      * @throws IOException
      */
     protected boolean isValidURL(String url) throws URISyntaxException, MalformedURLException, IOException{
+        if (url==null)  return false;
 		URI uri = new URI(url);
 		HttpURLConnection conn = (HttpURLConnection)uri.toURL().openConnection();
 		
@@ -394,7 +395,7 @@ public final class ReviewboardDescriptorImpl extends BuildStepDescriptor<Publish
      * @return true if available, false otherwise
      */
     protected boolean isSavedCommandPathValid(){
-    	return FormValidation.validateExecutable(cmdPath).kind.compareTo(FormValidation.Kind.OK) == 0;
+    	return FormValidation.validateExecutable(cmdPath).kind==FormValidation.Kind.OK;
     }
     
     /**
