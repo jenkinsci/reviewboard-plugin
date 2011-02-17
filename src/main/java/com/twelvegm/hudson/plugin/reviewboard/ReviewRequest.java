@@ -24,7 +24,7 @@ package com.twelvegm.hudson.plugin.reviewboard;
  * Represents a single Review Request in Reviewboard.
  * 
  * Currently not a complete model of a review request.  Only contains values
- * needed for the Reviewboard Hudson Plugin.  This should be expanded as 
+ * needed for the Reviewboard Jenkins Plugin.  This should be expanded as 
  * more fields are required.
  * 
  * @author Ryan Shelley 

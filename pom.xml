@@ -3,16 +3,15 @@
   <parent>
     <groupId>org.jvnet.hudson.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>1.355</version>
+    <version>1.358</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
   <name>Reviewboard Publisher</name>
-  <groupId>hudson.plugins.reviewboard</groupId>
   <artifactId>reviewboard</artifactId>
   <version>1.0.1-SNAPSHOT</version>
   <packaging>hpi</packaging>
-  <url>http://wiki.hudson-ci.org/display/HUDSON/Reviewboard+Plugin</url>
+  <url>http://wiki.jenkins-ci.org/display/JENKINS/Reviewboard+Plugin</url>
 
   <developers>
     <developer>

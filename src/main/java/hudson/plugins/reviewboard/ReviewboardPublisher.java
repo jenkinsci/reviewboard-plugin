@@ -108,7 +108,7 @@ public class ReviewboardPublisher extends Notifier {
 	// update a review once it was created with RB_NEW even without RB_UPDATE.
 	private boolean forceUpdateOverride = false;
 	
-	// Defines the number of days since last review update (through Hudson) before the review
+	// Defines the number of days since last review update (through Jenkins) before the review
 	// is considered stale and a new review request is created with the same external ID.
 	// -1 = no expiration until build containing mapping is removed.
 	private Integer daysBeforeStaleReview = -1;
@@ -797,7 +797,7 @@ public class ReviewboardPublisher extends Notifier {
     }
     
     /**
-     * Inspects the supplied string for a matching pattern, that is configured from the Hudson Build Configuration
+     * Inspects the supplied string for a matching pattern, that is configured from the Jenkins Build Configuration
      * page, and returns it if it is found.  This external ID is often that from an bug tracking system such as 
      * JIRA, and this description is often pulled from the changelist description itself.  That means the individual
      * submitting the change needs to supply the external ID somewhere within the body of the change description.

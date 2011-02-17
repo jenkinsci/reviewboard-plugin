@@ -264,7 +264,8 @@ public final class ReviewboardDescriptorImpl extends BuildStepDescriptor<Publish
     }
 
     /**
-     * Configures the Reviewboard plugin with parameters supplied on the Global configuration page of Hudson.
+     * Configures the Reviewboard plugin with parameters supplied on the Global configuration
+     * page of Jenkins.
      * 
      * @param req Form submission request
      * @param o JSON object containing values from global configuration
