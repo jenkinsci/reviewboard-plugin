@@ -13,6 +13,12 @@
   <packaging>hpi</packaging>
   <url>http://wiki.jenkins-ci.org/display/JENKINS/Reviewboard+Plugin</url>
 
+  <scm>
+   <connection>scm:git:git://github.com/jenkinsci/reviewboard-plugin.git</connection>
+   <developerConnection>scm:git:git@github.com:jenkinsci/reviewboard-plugin.git</developerConnection>
+   <url>https://github.com/jenkinsci/reviewboard-plugin</url>
+  </scm>
+
   <developers>
     <developer>
       <id>rshelley</id>
