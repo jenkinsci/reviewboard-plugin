@@ -1,6 +1,0 @@
-<!--
-  This view is used to render the plugin list page.
--->
-<div>
-  Publishes SCM changes to Reviewboard code review system. Currently only works with Perforce, so the Perforce SCM plugin must also be installed.
-</div>
